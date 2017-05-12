@@ -3,8 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Module JS</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<div id="peopleModule">
+    <h1>People</h1>
+    <input placeholder="name" type="text">
+    <button id="addPerson">Add Person</button>
+    <ul id="people">
+        <script id="people-template" type="text/template">
+            {{#people}}
+                <li>
+                    <span>{{.}}</span>
+                    <i class="del">X</i>
+                </li>
+            {{/people}}
+        </script>
+    </ul>
+	</div>
 	<!-- Add 'jQuery' -->
 	<script src="libs/jquery-2.2.4.min.js"></script>
 	<!-- Add 'Mustache' -->
