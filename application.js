@@ -15,4 +15,8 @@ $('#peopleModule').find('button').on('click', function() {
 $('#peopleModule').find('ul').delegate('i.del', 'click', function(e) {
 	var $remove = $(e.target).closest('li');
 	var i = $('#peopleModule').find('li').index($remove);
+
+	$remove.remove();
+
+	people.splice(i, 1);
 });
